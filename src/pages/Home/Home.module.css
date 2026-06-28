@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroSection {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-blue);
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.accentText {
+  background: linear-gradient(135deg, var(--color-yellow) 0%, #EF4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.25));
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 840px;
+  width: 100%;
+}
+
+.optionCard {
+  display: flex;
+  flex-direction: column;
+  padding: 36px !important;
+  background: rgba(17, 24, 39, 0.55);
+  border: var(--glass-border);
+  min-height: 290px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+
+.footerSection {
+  margin-top: 56px;
+}
+
+.systemStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.activePulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-green);
+  box-shadow: 0 0 8px var(--color-green);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .optionsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .optionCard {
+    padding: 24px !important;
+    min-height: auto;
+  }
+}

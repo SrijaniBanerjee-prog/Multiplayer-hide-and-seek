@@ -1,0 +1,16 @@
+{
+  "name": "multiplayer-hide-and-seek-server",
+  "version": "1.0.0",
+  "description": "Server for Hide and Seek game",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "socket.io": "^4.8.0"
+  }
+}

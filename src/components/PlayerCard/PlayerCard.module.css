@@ -1,0 +1,181 @@
+.playerCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(17, 24, 39, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition-smooth);
+  width: 100%;
+}
+
+.playerCard:hover {
+  background: rgba(30, 41, 59, 0.4);
+}
+
+.cardSelf {
+  border-color: rgba(59, 130, 246, 0.2);
+  background: rgba(59, 130, 246, 0.03);
+}
+
+.cardSelf:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.cardReady {
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatarWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 2px;
+  transition: var(--transition-smooth);
+}
+
+.playerCard:hover .avatar {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.avatarGlow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  border: 2px solid var(--color-green);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+  animation: rotateGlow 3s linear infinite;
+  pointer-events: none;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.selfBadge {
+  font-size: 0.75rem;
+  color: var(--color-blue);
+  font-weight: 500;
+}
+
+.hostBadge {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: var(--color-yellow);
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 6px rgba(245, 158, 11, 0.3);
+}
+
+.scoreBadge {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: #60A5FA;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 6px rgba(59, 130, 246, 0.2);
+}
+
+.clickTip {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  opacity: 0;
+  transform: translateY(2px);
+  transition: var(--transition-smooth);
+}
+
+.playerCard:hover .clickTip {
+  opacity: 0.5;
+  transform: translateY(0);
+}
+
+.statusSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: var(--transition-smooth);
+}
+
+.ready {
+  background-color: var(--color-green);
+  box-shadow: 0 0 8px var(--color-green);
+}
+
+.notReady {
+  background-color: #64748B;
+}
+
+.statusText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.cardReady .statusText {
+  color: #FFFFFF;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { transform: rotate(360deg); opacity: 0.6; }
+}
+
+@media (max-width: 480px) {
+  .playerCard {
+    padding: 12px 14px;
+  }
+  
+  .avatar {
+    width: 38px;
+    height: 38px;
+  }
+}

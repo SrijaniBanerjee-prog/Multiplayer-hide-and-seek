@@ -1,0 +1,16 @@
+.readyBtnContainer {
+  width: 100%;
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 0.95rem;
+}
+
+.activeReady {
+  box-shadow: var(--shadow-glow-red) !important;
+}
+
+.inactiveReady {
+  box-shadow: var(--shadow-glow-green) !important;
+}

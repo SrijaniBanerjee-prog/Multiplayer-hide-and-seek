@@ -1,0 +1,52 @@
+.copyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.codeLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+}
+
+.codeBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(30, 41, 59, 0.4);
+  border: var(--glass-border);
+  border-radius: 8px;
+  padding: 6px 6px 6px 16px;
+  width: auto;
+  transition: var(--transition-smooth);
+}
+
+.codeBox:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.code {
+  font-family: 'Outfit', monospace;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.copyBtn {
+  font-size: 0.7rem !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  text-transform: uppercase;
+}
+
+.copyIcon {
+  font-size: 0.8rem;
+  margin-right: 4px;
+}

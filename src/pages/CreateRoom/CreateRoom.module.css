@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  padding: 24px;
+}
+
+.formCard {
+  max-width: 440px;
+  width: 100%;
+  padding: 32px !important;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.backArrow {
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--transition-smooth);
+  margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.backArrow:hover {
+  color: #FFFFFF;
+  transform: translateX(-4px);
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin-right: auto;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tipBox {
+  display: flex;
+  gap: 12px;
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 8px 0 24px 0;
+}
+
+.tipIcon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.tipText {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
